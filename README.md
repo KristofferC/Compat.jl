@@ -355,6 +355,10 @@ Currently, the `@compat` macro supports the following syntaxes:
 * `Compat.findfirst`, `Compat.findnext`, `Compat.findlast` and `Compat.findprev`,
   return `nothing` when no match is found (rather than `0`) as on Julia 0.7 ([#24673]).
 
+* `Compat.findfirst`, `Compat.findnext`, `Compat.findlast` and `Compat.findprev`,
+  return `nothing` when no match is found (rather than the empty range `0:-1`)
+  as on Julia 0.7 ([#26149]).
+
 * `findin(a, b)` is now `findall(occursin(b), a)` ([#24673]).
 
 * `indmin` and `indmax` are now `argmin` and `argmax`, respectively ([#25654]).
@@ -586,4 +590,5 @@ includes this fix. Find the minimum version from there.
 [#25990]: https://github.com/JuliaLang/julia/issues/25990
 [#26069]: https://github.com/JuliaLang/julia/issues/26069
 [#26089]: https://github.com/JuliaLang/julia/issues/26089
+[#26149]: https://github.com/JuliaLang/julia/issues/26149
 [#26156]: https://github.com/JuliaLang/julia/issues/26156
